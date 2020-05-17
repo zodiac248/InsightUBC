@@ -1,0 +1,76 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 90
+                            }
+                        },
+                        {
+                            "IS": {
+                                "courses_dept": "adhe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 95
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "overallAvg",
+                "maxFail",
+                "countAvg",
+                "sumPass",
+                "courses_title"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "overallAvg",
+                    "maxFail",
+                    "countAvg",
+                    "sumPass",
+                    "courses_title"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                },
+                {
+                    "maxFail": {
+                        "MAX": "courses_pass"
+                    }
+                },
+                {
+                    "countAvg": {
+                        "COUNT": "courses_avg"
+                    }
+                },
+                {
+                    "sumPass": {
+                        "SUM": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"overallAvg":95,"maxFail":19,"countAvg":1,"sumPass":38,"courses_title":"ict educ ethics"},{"overallAvg":95,"maxFail":9,"countAvg":1,"sumPass":18,"courses_title":"mult des anal rs"},{"overallAvg":95,"maxFail":9,"countAvg":1,"sumPass":18,"courses_title":"mntl hlth concrn"},{"overallAvg":95,"maxFail":8,"countAvg":1,"sumPass":16,"courses_title":"health psych"},{"overallAvg":95,"maxFail":7,"countAvg":1,"sumPass":30,"courses_title":"ubc singers"},{"overallAvg":95,"maxFail":7,"countAvg":1,"sumPass":11,"courses_title":"spec tpcs kin"},{"overallAvg":95,"maxFail":7,"countAvg":1,"sumPass":7,"courses_title":"coll&uni teachng"},{"overallAvg":95,"maxFail":6,"countAvg":1,"sumPass":12,"courses_title":"hydrmtllgcl rctr"},{"overallAvg":95,"maxFail":6,"countAvg":1,"sumPass":12,"courses_title":"algb geometry i"},{"overallAvg":95,"maxFail":6,"countAvg":1,"sumPass":6,"courses_title":"eval src evidenc"},{"overallAvg":95,"maxFail":5,"countAvg":1,"sumPass":5,"courses_title":"kin project"},{"overallAvg":95,"maxFail":4,"countAvg":1,"sumPass":8,"courses_title":"adlt psychpathlg"},{"overallAvg":95,"maxFail":4,"countAvg":1,"sumPass":4,"courses_title":"directed study"},{"overallAvg":95,"maxFail":3,"countAvg":1,"sumPass":13,"courses_title":"thesis"},{"overallAvg":95,"maxFail":3,"countAvg":1,"sumPass":6,"courses_title":"spc tpcs macroec"},{"overallAvg":95,"maxFail":2,"countAvg":1,"sumPass":4,"courses_title":"master eng proj"},{"overallAvg":95,"maxFail":1,"countAvg":1,"sumPass":2,"courses_title":"m.sc major essay"},{"overallAvg":95,"maxFail":1,"countAvg":1,"sumPass":1,"courses_title":"msc thesis"},{"overallAvg":95,"maxFail":1,"countAvg":1,"sumPass":1,"courses_title":"masters thesis"},{"overallAvg":92.56,"maxFail":62,"countAvg":5,"sumPass":181,"courses_title":"dev wkshp/sem"},{"overallAvg":90.96,"maxFail":34,"countAvg":7,"sumPass":193,"courses_title":"com adult educ"},{"overallAvg":90.17,"maxFail":31,"countAvg":2,"sumPass":42,"courses_title":"adul educ"}]
+}

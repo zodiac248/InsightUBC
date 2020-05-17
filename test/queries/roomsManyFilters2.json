@@ -1,0 +1,85 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "AND": [
+                        {
+                            "IS": {
+                                "rooms_furniture": "*Tables*"
+                            }
+                        },
+                        {
+                            "IS": {
+                                "rooms_fullname": "Hugh Dempster Pavilion"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "IS": {
+                        "rooms_shortname": "WOOD"
+                    }
+                },
+                {
+                    "IS": {
+                        "rooms_type": "Large Group"
+                    }
+                },
+                {
+                    "EQ": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "minSeats",
+                "countType",
+                "maxLon",
+                "countFurniture",
+                "rooms_seats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "minSeats",
+                    "countType",
+                    "maxLon",
+                    "countFurniture"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_seats"
+            ],
+            "APPLY": [
+                {
+                    "minSeats": {
+                        "MIN": "rooms_seats"
+                    }
+                },
+                {
+                    "maxLon": {
+                        "MAX": "rooms_lon"
+                    }
+                },
+                {
+                    "countFurniture": {
+                        "COUNT": "rooms_furniture"
+                    }
+                },
+                {
+                    "countType": {
+                        "COUNT": "rooms_type"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"minSeats":503,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":503},{"minSeats":181,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":181},{"minSeats":160,"countType":1,"maxLon":-123.24807,"countFurniture":1,"rooms_seats":160},{"minSeats":120,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":120},{"minSeats":88,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":88},{"minSeats":80,"countType":1,"maxLon":-123.24807,"countFurniture":1,"rooms_seats":80},{"minSeats":40,"countType":1,"maxLon":-123.24807,"countFurniture":1,"rooms_seats":40},{"minSeats":30,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":30},{"minSeats":21,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":21},{"minSeats":16,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":16},{"minSeats":14,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":14},{"minSeats":12,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":12},{"minSeats":10,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":10}]
+}

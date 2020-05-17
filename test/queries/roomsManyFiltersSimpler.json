@@ -1,0 +1,59 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "AND": [
+                        {
+                            "IS": {
+                                "rooms_furniture": "*Tables*"
+                            }
+                        },
+                        {
+                            "IS": {
+                                "rooms_fullname": "Hugh Dempster Pavilion"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "IS": {
+                        "rooms_shortname": "WOOD"
+                    }
+                },
+                {
+                    "IS": {
+                        "rooms_type": "Large Group"
+                    }
+                },
+                {
+                    "EQ": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_fullname",
+                "rooms_furniture",
+                "rooms_shortname",
+                "rooms_type",
+                "rooms_seats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_fullname",
+                    "rooms_furniture",
+                    "rooms_shortname",
+                    "rooms_type",
+                    "rooms_seats"
+                ]
+            }
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tablets","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":21},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":30},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":30},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":16},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":14},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":12},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":12},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":10},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":10},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"WOOD","rooms_type":"Small Group","rooms_seats":10},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Fixed Tablets","rooms_shortname":"WOOD","rooms_type":"Tiered Large Group","rooms_seats":503},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Fixed Tablets","rooms_shortname":"WOOD","rooms_type":"Tiered Large Group","rooms_seats":181},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","rooms_shortname":"WOOD","rooms_type":"Tiered Large Group","rooms_seats":120},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","rooms_shortname":"WOOD","rooms_type":"Tiered Large Group","rooms_seats":120},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","rooms_shortname":"WOOD","rooms_type":"Tiered Large Group","rooms_seats":120},{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","rooms_shortname":"WOOD","rooms_type":"Tiered Large Group","rooms_seats":88},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"DMP","rooms_type":"Small Group","rooms_seats":40},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_furniture":"Classroom-Movable Tables & Chairs","rooms_shortname":"DMP","rooms_type":"Small Group","rooms_seats":40},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","rooms_shortname":"DMP","rooms_type":"Tiered Large Group","rooms_seats":160},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","rooms_shortname":"DMP","rooms_type":"Tiered Large Group","rooms_seats":120},{"rooms_fullname":"Hugh Dempster Pavilion","rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","rooms_shortname":"DMP","rooms_type":"Tiered Large Group","rooms_seats":80}]
+}

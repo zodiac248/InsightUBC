@@ -1,0 +1,48 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 92.5
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "*ar*"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {"courses_dept":"phar","courses_id":"403","courses_avg":92.66},
+        {"courses_dept":"arst","courses_id":"500","courses_avg":92.8},
+        {"courses_dept":"arst","courses_id":"500","courses_avg":92.8},
+        {"courses_dept":"larc","courses_id":"551","courses_avg":92.8},
+        {"courses_dept":"larc","courses_id":"551","courses_avg":92.8},
+        {"courses_dept":"phar","courses_id":"403","courses_avg":92.85},
+        {"courses_dept":"phar","courses_id":"548","courses_avg":93},
+        {"courses_dept":"arth","courses_id":"599","courses_avg":93},
+        {"courses_dept":"arth","courses_id":"599","courses_avg":93},
+        {"courses_dept":"arst","courses_id":"620","courses_avg":93},
+        {"courses_dept":"arst","courses_id":"620","courses_avg":93},
+        {"courses_dept":"arst","courses_id":"500","courses_avg":94},
+        {"courses_dept":"arst","courses_id":"500","courses_avg":94},
+        {"courses_dept":"phar","courses_id":"403","courses_avg":94.54},
+        {"courses_dept":"phar","courses_id":"403","courses_avg":94.87},
+        {"courses_dept":"phar","courses_id":"403","courses_avg":95.07},
+        {"courses_dept":"arst","courses_id":"550","courses_avg":96.94},
+        {"courses_dept":"arst","courses_id":"550","courses_avg":96.94}
+    ]
+}

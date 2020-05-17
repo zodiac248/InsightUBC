@@ -1,0 +1,54 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "overallAvg",
+                "minFail",
+                "minAvg",
+                "countPass",
+                "courses_year"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "minAvg",
+                    "countPass",
+                    "overallAvg",
+                    "minFail"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_year"
+            ],
+            "APPLY": [
+                {
+                    "minFail": {
+                        "MIN": "courses_pass"
+                    }
+                },
+                {
+                    "minAvg": {
+                        "MIN": "courses_avg"
+                    }
+                },
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                },
+                {
+                    "countPass": {
+                        "COUNT": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"overallAvg":77.81,"minFail":1,"minAvg":50,"countPass":269,"courses_year":2012},{"overallAvg":77.96,"minFail":1,"minAvg":48.9,"countPass":288,"courses_year":2014},{"overallAvg":76.27,"minFail":1,"minAvg":46.5,"countPass":228,"courses_year":2007},{"overallAvg":77.67,"minFail":1,"minAvg":42,"countPass":265,"courses_year":2011},{"overallAvg":78.22,"minFail":1,"minAvg":39.03,"countPass":285,"courses_year":2015},{"overallAvg":77.16,"minFail":1,"minAvg":33.2,"countPass":233,"courses_year":2008},{"overallAvg":77.48,"minFail":1,"minAvg":33,"countPass":260,"courses_year":2010},{"overallAvg":78.01,"minFail":0,"minAvg":4.5,"countPass":278,"courses_year":2013},{"overallAvg":78.17,"minFail":0,"minAvg":4,"countPass":175,"courses_year":2016},{"overallAvg":79.26,"minFail":0,"minAvg":0,"countPass":889,"courses_year":1900},{"overallAvg":77,"minFail":0,"minAvg":0,"countPass":264,"courses_year":2009}]
+}

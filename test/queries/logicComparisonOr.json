@@ -1,0 +1,35 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "GT": {
+                        "courses_avg": 99
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_audit": 20
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_dept":"rhsc","courses_avg":86.89},
+        {"courses_dept":"rhsc","courses_avg":88.79},
+        {"courses_dept":"cpsc","courses_avg":90.53},
+        {"courses_dept":"cnps","courses_avg":99.19},
+        {"courses_dept":"math","courses_avg":99.78},
+        {"courses_dept":"math","courses_avg":99.78}
+    ]
+}

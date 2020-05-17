@@ -1,0 +1,52 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "rooms_seats": 250
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "maxSeats",
+                "rooms_lon",
+                "rooms_lat"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "maxSeats"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_lon",
+                "rooms_lat"
+            ],
+            "APPLY": [
+                {
+                    "maxSeats": {
+                        "MAX": "rooms_seats"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"maxSeats":503,"rooms_lon":-123.24673,"rooms_lat":49.26478},
+        {"maxSeats":442,"rooms_lon":-123.24467,"rooms_lat":49.26047},
+        {"maxSeats":426,"rooms_lon":-123.25314,"rooms_lat":49.26207},
+        {"maxSeats":375,"rooms_lon":-123.25165,"rooms_lat":49.2661},
+        {"maxSeats":350,"rooms_lon":-123.25224,"rooms_lat":49.26274},
+        {"maxSeats":350,"rooms_lon":-123.24494,"rooms_lat":49.26236},
+        {"maxSeats":325,"rooms_lon":-123.24937,"rooms_lat":49.26517},
+        {"maxSeats":299,"rooms_lon":-123.24894,"rooms_lat":49.2683},
+        {"maxSeats":280,"rooms_lon":-123.2531,"rooms_lat":49.26398},
+        {"maxSeats":275,"rooms_lon":-123.25468,"rooms_lat":49.26826},
+        {"maxSeats":265,"rooms_lon":-123.25308,"rooms_lat":49.2659},
+        {"maxSeats":260,"rooms_lon":-123.25364,"rooms_lat":49.26486},
+        {"maxSeats":257,"rooms_lon":-123.25374,"rooms_lat":49.26627}
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 90
+                            }
+                        },
+                        {
+                            "IS": {
+                                "courses_dept": "adhe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 97
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": []
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_title":"dev wkshp/sem"},
+        {"courses_title":"com adult educ"},
+        {"courses_title":"adul educ"},
+        {"courses_title":"thesis"},
+        {"courses_title":"acad assess schl"},
+        {"courses_title":"masters thesis"}
+    ]
+}

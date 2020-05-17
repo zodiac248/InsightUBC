@@ -1,0 +1,47 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 95
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept": "p*"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {"courses_dept":"phar","courses_id":"403","courses_avg":95.07},
+        {"courses_dept":"psyc","courses_id":"541","courses_avg":95.25},
+        {"courses_dept":"psyc","courses_id":"541","courses_avg":95.25},
+        {"courses_dept":"phth","courses_id":"566","courses_avg":95.37},
+        {"courses_dept":"phth","courses_id":"566","courses_avg":95.37},
+        {"courses_dept":"phys","courses_id":"508","courses_avg":95.43},
+        {"courses_dept":"phys","courses_id":"508","courses_avg":95.43},
+        {"courses_dept":"psyc","courses_id":"537","courses_avg":95.75},
+        {"courses_dept":"psyc","courses_id":"537","courses_avg":95.75},
+        {"courses_dept":"psyc","courses_id":"549","courses_avg":96},
+        {"courses_dept":"psyc","courses_id":"501","courses_avg":96},
+        {"courses_dept":"psyc","courses_id":"501","courses_avg":96},
+        {"courses_dept":"phil","courses_id":"120","courses_avg":96},
+        {"courses_dept":"pcth","courses_id":"549","courses_avg":96},
+        {"courses_dept":"plan","courses_id":"595","courses_avg":96.47},
+        {"courses_dept":"plan","courses_id":"595","courses_avg":96.47},
+        {"courses_dept":"psyc","courses_id":"549","courses_avg":97}
+    ]
+}

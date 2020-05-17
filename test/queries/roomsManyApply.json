@@ -1,0 +1,53 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "minSeats",
+                "countType",
+                "maxLon",
+                "countFurniture",
+                "rooms_seats"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "minSeats",
+                    "countType",
+                    "maxLon",
+                    "countFurniture"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_seats"
+            ],
+            "APPLY": [
+                {
+                    "minSeats": {
+                        "MIN": "rooms_seats"
+                    }
+                },
+                {
+                    "maxLon": {
+                        "MAX": "rooms_lon"
+                    }
+                },
+                {
+                    "countFurniture": {
+                        "COUNT": "rooms_furniture"
+                    }
+                },
+                {
+                    "countType": {
+                        "COUNT": "rooms_type"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"minSeats":503,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":503},{"minSeats":442,"countType":1,"maxLon":-123.24467,"countFurniture":1,"rooms_seats":442},{"minSeats":426,"countType":1,"maxLon":-123.25314,"countFurniture":1,"rooms_seats":426},{"minSeats":375,"countType":1,"maxLon":-123.25165,"countFurniture":1,"rooms_seats":375},{"minSeats":350,"countType":1,"maxLon":-123.24494,"countFurniture":2,"rooms_seats":350},{"minSeats":325,"countType":1,"maxLon":-123.24937,"countFurniture":1,"rooms_seats":325},{"minSeats":299,"countType":1,"maxLon":-123.24894,"countFurniture":1,"rooms_seats":299},{"minSeats":280,"countType":1,"maxLon":-123.2531,"countFurniture":1,"rooms_seats":280},{"minSeats":275,"countType":1,"maxLon":-123.25468,"countFurniture":1,"rooms_seats":275},{"minSeats":265,"countType":1,"maxLon":-123.25308,"countFurniture":1,"rooms_seats":265},{"minSeats":260,"countType":1,"maxLon":-123.25364,"countFurniture":1,"rooms_seats":260},{"minSeats":257,"countType":1,"maxLon":-123.25374,"countFurniture":1,"rooms_seats":257},{"minSeats":250,"countType":1,"maxLon":-123.24886,"countFurniture":1,"rooms_seats":250},{"minSeats":240,"countType":1,"maxLon":-123.25308,"countFurniture":1,"rooms_seats":240},{"minSeats":236,"countType":1,"maxLon":-123.24342,"countFurniture":1,"rooms_seats":236},{"minSeats":228,"countType":1,"maxLon":-123.25249,"countFurniture":1,"rooms_seats":228},{"minSeats":225,"countType":1,"maxLon":-123.25623,"countFurniture":1,"rooms_seats":225},{"minSeats":224,"countType":1,"maxLon":-123.255534,"countFurniture":1,"rooms_seats":224},{"minSeats":205,"countType":1,"maxLon":-123.25533,"countFurniture":1,"rooms_seats":205},{"minSeats":200,"countType":1,"maxLon":-123.24718,"countFurniture":2,"rooms_seats":200},{"minSeats":190,"countType":1,"maxLon":-123.25431,"countFurniture":1,"rooms_seats":190},{"minSeats":188,"countType":1,"maxLon":-123.25431,"countFurniture":1,"rooms_seats":188},{"minSeats":187,"countType":1,"maxLon":-123.25431,"countFurniture":1,"rooms_seats":187},{"minSeats":183,"countType":1,"maxLon":-123.25533,"countFurniture":1,"rooms_seats":183},{"minSeats":181,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":181},{"minSeats":167,"countType":1,"maxLon":-123.24342,"countFurniture":1,"rooms_seats":167},{"minSeats":160,"countType":1,"maxLon":-123.24608,"countFurniture":1,"rooms_seats":160},{"minSeats":155,"countType":1,"maxLon":-123.25374,"countFurniture":1,"rooms_seats":155},{"minSeats":154,"countType":1,"maxLon":-123.2521,"countFurniture":1,"rooms_seats":154},{"minSeats":150,"countType":1,"maxLon":-123.25224,"countFurniture":2,"rooms_seats":150},{"minSeats":144,"countType":1,"maxLon":-123.25099,"countFurniture":1,"rooms_seats":144},{"minSeats":136,"countType":1,"maxLon":-123.24935,"countFurniture":1,"rooms_seats":136},{"minSeats":131,"countType":1,"maxLon":-123.25468,"countFurniture":1,"rooms_seats":131},{"minSeats":125,"countType":1,"maxLon":-123.24494,"countFurniture":1,"rooms_seats":125},{"minSeats":123,"countType":1,"maxLon":-123.24935,"countFurniture":1,"rooms_seats":123},{"minSeats":120,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":120},{"minSeats":114,"countType":1,"maxLon":-123.25308,"countFurniture":1,"rooms_seats":114},{"minSeats":112,"countType":1,"maxLon":-123.2521,"countFurniture":1,"rooms_seats":112},{"minSeats":108,"countType":1,"maxLon":-123.25468,"countFurniture":1,"rooms_seats":108},{"minSeats":106,"countType":1,"maxLon":-123.254816,"countFurniture":1,"rooms_seats":106},{"minSeats":102,"countType":1,"maxLon":-123.24937,"countFurniture":1,"rooms_seats":102},{"minSeats":100,"countType":3,"maxLon":-123.24894,"countFurniture":3,"rooms_seats":100},{"minSeats":99,"countType":1,"maxLon":-123.24886,"countFurniture":1,"rooms_seats":99},{"minSeats":94,"countType":2,"maxLon":-123.24718,"countFurniture":2,"rooms_seats":94},{"minSeats":90,"countType":2,"maxLon":-123.25308,"countFurniture":2,"rooms_seats":90},{"minSeats":88,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":88},{"minSeats":84,"countType":1,"maxLon":-123.24935,"countFurniture":1,"rooms_seats":84},{"minSeats":80,"countType":2,"maxLon":-123.24807,"countFurniture":3,"rooms_seats":80},{"minSeats":78,"countType":2,"maxLon":-123.25468,"countFurniture":2,"rooms_seats":78},{"minSeats":76,"countType":1,"maxLon":-123.25249,"countFurniture":1,"rooms_seats":76},{"minSeats":75,"countType":1,"maxLon":-123.25533,"countFurniture":1,"rooms_seats":75},{"minSeats":74,"countType":1,"maxLon":-123.25027,"countFurniture":1,"rooms_seats":74},{"minSeats":72,"countType":4,"maxLon":-123.24342,"countFurniture":4,"rooms_seats":72},{"minSeats":70,"countType":1,"maxLon":-123.25237,"countFurniture":1,"rooms_seats":70},{"minSeats":68,"countType":2,"maxLon":-123.25364,"countFurniture":2,"rooms_seats":68},{"minSeats":66,"countType":1,"maxLon":-123.24842,"countFurniture":1,"rooms_seats":66},{"minSeats":65,"countType":2,"maxLon":-123.24886,"countFurniture":1,"rooms_seats":65},{"minSeats":63,"countType":1,"maxLon":-123.25179,"countFurniture":1,"rooms_seats":63},{"minSeats":62,"countType":1,"maxLon":-123.24894,"countFurniture":1,"rooms_seats":62},{"minSeats":60,"countType":4,"maxLon":-123.24718,"countFurniture":3,"rooms_seats":60},{"minSeats":58,"countType":1,"maxLon":-123.25364,"countFurniture":1,"rooms_seats":58},{"minSeats":56,"countType":1,"maxLon":-123.25468,"countFurniture":1,"rooms_seats":56},{"minSeats":55,"countType":1,"maxLon":-123.25692,"countFurniture":1,"rooms_seats":55},{"minSeats":54,"countType":2,"maxLon":-123.24959,"countFurniture":3,"rooms_seats":54},{"minSeats":53,"countType":1,"maxLon":-123.25364,"countFurniture":1,"rooms_seats":53},{"minSeats":51,"countType":1,"maxLon":-123.25583,"countFurniture":1,"rooms_seats":51},{"minSeats":50,"countType":2,"maxLon":-123.25042,"countFurniture":3,"rooms_seats":50},{"minSeats":48,"countType":3,"maxLon":-123.24944,"countFurniture":4,"rooms_seats":48},{"minSeats":47,"countType":1,"maxLon":-123.25027,"countFurniture":1,"rooms_seats":47},{"minSeats":45,"countType":1,"maxLon":-123.24894,"countFurniture":1,"rooms_seats":45},{"minSeats":44,"countType":4,"maxLon":-123.25179,"countFurniture":2,"rooms_seats":44},{"minSeats":43,"countType":1,"maxLon":-123.24959,"countFurniture":1,"rooms_seats":43},{"minSeats":42,"countType":1,"maxLon":-123.25468,"countFurniture":1,"rooms_seats":42},{"minSeats":41,"countType":1,"maxLon":-123.25364,"countFurniture":1,"rooms_seats":41},{"minSeats":40,"countType":2,"maxLon":-123.24467,"countFurniture":4,"rooms_seats":40},{"minSeats":39,"countType":1,"maxLon":-123.24467,"countFurniture":2,"rooms_seats":39},{"minSeats":38,"countType":1,"maxLon":-123.2531,"countFurniture":1,"rooms_seats":38},{"minSeats":37,"countType":2,"maxLon":-123.25364,"countFurniture":2,"rooms_seats":37},{"minSeats":36,"countType":1,"maxLon":-123.24886,"countFurniture":1,"rooms_seats":36},{"minSeats":35,"countType":1,"maxLon":-123.25179,"countFurniture":1,"rooms_seats":35},{"minSeats":34,"countType":2,"maxLon":-123.24894,"countFurniture":2,"rooms_seats":34},{"minSeats":33,"countType":1,"maxLon":-123.25741,"countFurniture":1,"rooms_seats":33},{"minSeats":32,"countType":3,"maxLon":-123.25027,"countFurniture":2,"rooms_seats":32},{"minSeats":31,"countType":2,"maxLon":-123.25468,"countFurniture":2,"rooms_seats":31},{"minSeats":30,"countType":3,"maxLon":-123.24673,"countFurniture":4,"rooms_seats":30},{"minSeats":29,"countType":1,"maxLon":-123.25505,"countFurniture":1,"rooms_seats":29},{"minSeats":28,"countType":1,"maxLon":-123.24842,"countFurniture":2,"rooms_seats":28},{"minSeats":27,"countType":1,"maxLon":-123.24959,"countFurniture":3,"rooms_seats":27},{"minSeats":26,"countType":2,"maxLon":-123.24894,"countFurniture":1,"rooms_seats":26},{"minSeats":25,"countType":3,"maxLon":-123.2466,"countFurniture":4,"rooms_seats":25},{"minSeats":24,"countType":2,"maxLon":-123.24886,"countFurniture":3,"rooms_seats":24},{"minSeats":22,"countType":1,"maxLon":-123.24894,"countFurniture":2,"rooms_seats":22},{"minSeats":21,"countType":1,"maxLon":-123.24673,"countFurniture":3,"rooms_seats":21},{"minSeats":20,"countType":3,"maxLon":-123.24886,"countFurniture":2,"rooms_seats":20},{"minSeats":18,"countType":1,"maxLon":-123.24886,"countFurniture":1,"rooms_seats":18},{"minSeats":16,"countType":3,"maxLon":-123.24673,"countFurniture":3,"rooms_seats":16},{"minSeats":14,"countType":1,"maxLon":-123.24342,"countFurniture":1,"rooms_seats":14},{"minSeats":12,"countType":1,"maxLon":-123.24673,"countFurniture":2,"rooms_seats":12},{"minSeats":10,"countType":1,"maxLon":-123.24673,"countFurniture":1,"rooms_seats":10},{"minSeats":8,"countType":1,"maxLon":-123.25027,"countFurniture":2,"rooms_seats":8},{"minSeats":7,"countType":1,"maxLon":-123.24342,"countFurniture":1,"rooms_seats":7},{"minSeats":6,"countType":1,"maxLon":-123.25027,"countFurniture":1,"rooms_seats":6}]
+}

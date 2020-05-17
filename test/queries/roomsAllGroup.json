@@ -1,0 +1,31 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_type",
+                "minlon"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "minlon"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_type"
+            ],
+            "APPLY": [
+                {
+                    "minlon": {
+                        "MIN": "rooms_lon"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+"result":[{"rooms_type":"Active Learning","minlon":-123.24944},{"rooms_type":"TBD","minlon":-123.25364},{"rooms_type":"Case Style","minlon":-123.25468},{"rooms_type":"","minlon":-123.25583},{"rooms_type":"Tiered Large Group","minlon":-123.25623},{"rooms_type":"Studio Lab","minlon":-123.25692},{"rooms_type":"Open Design General Purpose","minlon":-123.25741},{"rooms_type":"Small Group","minlon":-123.25741}]}

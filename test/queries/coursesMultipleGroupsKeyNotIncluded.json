@@ -1,0 +1,61 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 98
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_pass": 5
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallAvg"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "overallAvg"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_pass"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_title":"algb topology i","overallAvg":99.78},
+        {"courses_title":"career planning","overallAvg":99.19},
+        {"courses_title":"work int health","overallAvg":98.98},
+        {"courses_title":"educ stds autism","overallAvg":98.8},
+        {"courses_title":"educ stds autism","overallAvg":98.76},
+        {"courses_title":"multimedia sys","overallAvg":98.75},
+        {"courses_title":"assess lrn diffi","overallAvg":98.7},
+        {"courses_title":"educ stds autism","overallAvg":98.58},
+        {"courses_title":"fam nrs pract","overallAvg":98.58},
+        {"courses_title":"fam nrs pract","overallAvg":98.5},
+        {"courses_title":"cl pro prim care","overallAvg":98.46},
+        {"courses_title":"dev el sk df&hrd","overallAvg":98.45},
+        {"courses_title":"assess lrn diffi","overallAvg":98.36},
+        {"courses_title":"assess lrn diffi","overallAvg":98.08}
+    ]
+}

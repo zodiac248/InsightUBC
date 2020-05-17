@@ -1,0 +1,36 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 91
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_id": "330"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_dept":"thtr","courses_id":"330","courses_avg":91.1},
+        {"courses_dept":"thtr","courses_id":"330","courses_avg":91.1},
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.29},
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.33},
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.33},
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.48}
+    ]
+}

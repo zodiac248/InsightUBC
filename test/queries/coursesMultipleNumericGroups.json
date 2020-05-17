@@ -1,0 +1,63 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 98
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_pass": 5
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "overallAvg",
+                "courses_pass",
+                "courses_avg"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "overallAvg"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_avg",
+                "courses_pass"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"overallAvg":99.78,"courses_pass":9,"courses_avg":99.78},
+        {"overallAvg":99.19,"courses_pass":16,"courses_avg":99.19},
+        {"overallAvg":98.98,"courses_pass":82,"courses_avg":98.98},
+        {"overallAvg":98.8,"courses_pass":25,"courses_avg":98.8},
+        {"overallAvg":98.76,"courses_pass":17,"courses_avg":98.76},
+        {"overallAvg":98.75,"courses_pass":12,"courses_avg":98.75},
+        {"overallAvg":98.71,"courses_pass":14,"courses_avg":98.71},
+        {"overallAvg":98.7,"courses_pass":10,"courses_avg":98.7},
+        {"overallAvg":98.58,"courses_pass":24,"courses_avg":98.58},
+        {"overallAvg":98.58,"courses_pass":12,"courses_avg":98.58},
+        {"overallAvg":98.5,"courses_pass":16,"courses_avg":98.5},
+        {"overallAvg":98.45,"courses_pass":11,"courses_avg":98.45},
+        {"overallAvg":98.36,"courses_pass":22,"courses_avg":98.36},
+        {"overallAvg":98.21,"courses_pass":14,"courses_avg":98.21},
+        {"overallAvg":98.08,"courses_pass":12,"courses_avg":98.08}
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "rooms_lon": -123.7
+                    }
+                },
+                {
+                    "LT": {
+                        "rooms_lon": -123
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_type",
+                "avgLat",
+                "avgLon"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "avgLat",
+                    "avgLon",
+                    "rooms_type"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_type"
+            ],
+            "APPLY": [
+                {
+                    "avgLat": {
+                        "AVG": "rooms_lat"
+                    }
+                },
+                {
+                    "avgLon": {
+                        "AVG": "rooms_lon"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_type":"TBD","avgLat":49.27,"avgLon":-123.25},{"rooms_type":"Open Design General Purpose","avgLat":49.27,"avgLon":-123.25},{"rooms_type":"Case Style","avgLat":49.27,"avgLon":-123.25},{"rooms_type":"","avgLat":49.27,"avgLon":-123.26},{"rooms_type":"Tiered Large Group","avgLat":49.26,"avgLon":-123.25},{"rooms_type":"Studio Lab","avgLat":49.26,"avgLon":-123.25},{"rooms_type":"Small Group","avgLat":49.26,"avgLon":-123.25},{"rooms_type":"Active Learning","avgLat":49.26,"avgLon":-123.25}]
+}

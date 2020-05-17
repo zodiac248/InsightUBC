@@ -1,0 +1,84 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 90
+                            }
+                        },
+                        {
+                            "IS": {
+                                "courses_dept": "adhe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 95
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "overallAvg",
+                "maxFail"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "overallAvg",
+                    "maxFail"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+                {
+                    "overallAvg": {
+                        "AVG": "courses_avg"
+                    }
+                },
+                {
+                    "maxFail": {
+                        "MAX": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {"courses_title":"ict educ ethics","overallAvg":95,"maxFail":19},
+        {"courses_title":"mult des anal rs","overallAvg":95,"maxFail":9},
+        {"courses_title":"mntl hlth concrn","overallAvg":95,"maxFail":9},
+        {"courses_title":"health psych","overallAvg":95,"maxFail":8},
+        {"courses_title":"coll&uni teachng","overallAvg":95,"maxFail":7},
+        {"courses_title":"spec tpcs kin","overallAvg":95,"maxFail":7},
+        {"courses_title":"ubc singers","overallAvg":95,"maxFail":7},
+        {"courses_title":"algb geometry i","overallAvg":95,"maxFail":6},
+        {"courses_title":"hydrmtllgcl rctr","overallAvg":95,"maxFail":6},
+        {"courses_title":"eval src evidenc","overallAvg":95,"maxFail":6},
+        {"courses_title":"kin project","overallAvg":95,"maxFail":5},
+        {"courses_title":"adlt psychpathlg","overallAvg":95,"maxFail":4},
+        {"courses_title":"directed study","overallAvg":95,"maxFail":4},
+        {"courses_title":"thesis","overallAvg":95,"maxFail":3},
+        {"courses_title":"spc tpcs macroec","overallAvg":95,"maxFail":3},
+        {"courses_title":"master eng proj","overallAvg":95,"maxFail":2},
+        {"courses_title":"m.sc major essay","overallAvg":95,"maxFail":1},
+        {"courses_title":"masters thesis","overallAvg":95,"maxFail":1},
+        {"courses_title":"msc thesis","overallAvg":95,"maxFail":1},
+        {"courses_title":"dev wkshp/sem","overallAvg":92.56,"maxFail":62},
+        {"courses_title":"com adult educ","overallAvg":90.96,"maxFail":34},
+        {"courses_title":"adul educ","overallAvg":90.17,"maxFail":31}
+    ]
+}

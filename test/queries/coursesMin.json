@@ -1,0 +1,63 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 80
+                            }
+                        },
+                        {
+                            "IS": {
+                                "courses_dept": "adhe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 97
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "min"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "min"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title"
+            ],
+            "APPLY": [
+                {
+                    "min": {
+                        "MIN": "courses_avg"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_title":"thesis","min":97},
+        {"courses_title":"acad assess schl","min":97},
+        {"courses_title":"masters thesis","min":97},
+        {"courses_title":"inst adul educ","min":82.82},
+        {"courses_title":"teach adult","min":80.76},
+        {"courses_title":"com adult educ","min":80.4},
+        {"courses_title":"dev wkshp/sem","min":80.33},
+        {"courses_title":"adul educ","min":80.25}
+    ]
+}

@@ -1,0 +1,257 @@
+
+                        <form data-type="rooms">
+                            <div class="form-group conditions">
+                                <legend>Conditions</legend>
+                                <div class="control-group condition-type">
+                                    <div class="control conditions-all-radio">
+                                        <input name="conditionType" id="rooms-conditiontype-all" type="radio" checked="" value="all">
+                                        <label for="rooms-conditiontype-all">All of the following</label>
+                                    </div>
+                                    <div class="control conditions-any-radio">
+                                        <input name="conditionType" id="rooms-conditiontype-any" type="radio" value="any">
+                                        <label for="rooms-conditiontype-any">Any of the following</label>
+                                    </div>
+                                    <div class="control conditions-none-radio">
+                                        <input name="conditionType" id="rooms-conditiontype-none" type="radio" value="none">
+                                        <label for="rooms-conditiontype-none">None of the following</label>
+                                    </div>
+                                </div>
+                                <div class="conditions-container"></div>
+                                <div class="icon-container"><a class="icon icon-plus" href="#"></a></div>
+                            </div>
+                            <div class="form-group columns">
+                                <legend>Columns</legend>
+                                <div class="control-group">
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-address" type="checkbox" value="address" data-key="address">
+                                            <label for="rooms-columns-field-address">Address</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-fullname" type="checkbox" value="fullname" data-key="fullname">
+                                            <label for="rooms-columns-field-fullname">Full Name</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-furniture" type="checkbox" value="furniture" data-key="furniture">
+                                            <label for="rooms-columns-field-furniture">Furniture</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-href" type="checkbox" value="href" data-key="href">
+                                            <label for="rooms-columns-field-href">Link</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-lat" type="checkbox" value="lat" data-key="lat">
+                                            <label for="rooms-columns-field-lat">Latitude</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-lon" type="checkbox" value="lon" data-key="lon">
+                                            <label for="rooms-columns-field-lon">Longitude</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-name" type="checkbox" value="name" data-key="name">
+                                            <label for="rooms-columns-field-name">Name</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-number" type="checkbox" value="number" data-key="number">
+                                            <label for="rooms-columns-field-number">Number</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-seats" type="checkbox" value="seats" data-key="seats">
+                                            <label for="rooms-columns-field-seats">Seats</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-shortname" type="checkbox" value="shortname" data-key="shortname">
+                                            <label for="rooms-columns-field-shortname">Short Name</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-columns-field-type" type="checkbox" checked="checked" value="type" data-key="type">
+                                            <label for="rooms-columns-field-type">Type</label>
+                                        </div>
+                                <div class="control transformation">
+    <input type="checkbox" checked="checked" value="avgLat" data-key="avgLat">
+    <label>avgLat</label>
+</div>
+<div class="control transformation">
+    <input type="checkbox" checked="checked" value="avgLon" data-key="avgLon">
+    <label>avgLon</label>
+</div>
+</div>
+                            </div>
+                            <div class="form-group order">
+                                <legend>Order</legend>
+                                <div class="control-group">
+                                    <div class="control order fields">
+                                        <select multiple="">
+                                                    <option value="address">
+                                                        Address
+                                                    </option>                <option value="fullname">
+                                                        Full Name
+                                                    </option>                <option value="furniture">
+                                                        Furniture
+                                                    </option>                <option value="href">
+                                                        Link
+                                                    </option>                <option value="lat">
+                                                        Latitude
+                                                    </option>                <option value="lon">
+                                                        Longitude
+                                                    </option>                <option value="name">
+                                                        Name
+                                                    </option>                <option value="number">
+                                                        Number
+                                                    </option>                <option value="seats">
+                                                        Seats
+                                                    </option>                <option value="shortname">
+                                                        Short Name
+                                                    </option>                <option value="type">
+                                                        Type
+                                                    </option>    <option class="transformation" value="avgLat">avgLat</option><option class="transformation" value="avgLon">avgLon</option></select>
+                                    </div>
+                                    <div class="control descending">
+                                        <input id="rooms-order" type="checkbox">
+                                        <label for="rooms-order">Descending</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group groups">
+                                <legend>Groups</legend>
+                                <div class="control-group">
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-address" type="checkbox" value="address" data-key="address">
+                                            <label for="rooms-groups-field-address">Address</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-fullname" type="checkbox" value="fullname" data-key="fullname">
+                                            <label for="rooms-groups-field-fullname">Full Name</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-furniture" type="checkbox" value="furniture" data-key="furniture">
+                                            <label for="rooms-groups-field-furniture">Furniture</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-href" type="checkbox" value="href" data-key="href">
+                                            <label for="rooms-groups-field-href">Link</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-lat" type="checkbox" value="lat" data-key="lat">
+                                            <label for="rooms-groups-field-lat">Latitude</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-lon" type="checkbox" value="lon" data-key="lon">
+                                            <label for="rooms-groups-field-lon">Longitude</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-name" type="checkbox" value="name" data-key="name">
+                                            <label for="rooms-groups-field-name">Name</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-number" type="checkbox" value="number" data-key="number">
+                                            <label for="rooms-groups-field-number">Number</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-seats" type="checkbox" value="seats" data-key="seats">
+                                            <label for="rooms-groups-field-seats">Seats</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-shortname" type="checkbox" value="shortname" data-key="shortname">
+                                            <label for="rooms-groups-field-shortname">Short Name</label>
+                                        </div>
+                                        <div class="control field">
+                                            <input id="rooms-groups-field-type" type="checkbox" checked="checked" value="type" data-key="type">
+                                            <label for="rooms-groups-field-type">Type</label>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="form-group transformations">
+                                <legend>Transformations</legend>
+                                <div class="transformations-container"><div class="control-group transformation">
+    <div class="control term">
+        <input type="text" value="avgLat">
+    </div>    <div class="control operators">
+        <select>
+                    <option value="COUNT">
+                        COUNT
+                    </option>                <option selected="selected" value="AVG">
+                        AVG
+                    </option>                <option value="MAX">
+                        MAX
+                    </option>                <option value="MIN">
+                        MIN
+                    </option>                <option value="SUM">
+                        SUM
+                    </option>    </select>
+    </div>
+    <div class="control fields">
+        <select>
+                    <option value="address">
+                        Address
+                    </option>                <option value="fullname">
+                        Full Name
+                    </option>                <option value="furniture">
+                        Furniture
+                    </option>                <option value="href">
+                        Link
+                    </option>                <option selected="selected" value="lat">
+                        Latitude
+                    </option>                <option value="lon">
+                        Longitude
+                    </option>                <option value="name">
+                        Name
+                    </option>                <option value="number">
+                        Number
+                    </option>                <option value="seats">
+                        Seats
+                    </option>                <option value="shortname">
+                        Short Name
+                    </option>                <option value="type">
+                        Type
+                    </option>    </select>
+    </div>
+    <a class="icon icon-minus" href="#"></a>
+</div><div class="control-group transformation">
+    <div class="control term">
+        <input type="text" value="avgLon">
+    </div>    <div class="control operators">
+        <select>
+                    <option value="COUNT">
+                        COUNT
+                    </option>                <option selected="selected" value="AVG">
+                        AVG
+                    </option>                <option value="MAX">
+                        MAX
+                    </option>                <option value="MIN">
+                        MIN
+                    </option>                <option value="SUM">
+                        SUM
+                    </option>    </select>
+    </div>
+    <div class="control fields">
+        <select>
+                    <option value="address">
+                        Address
+                    </option>                <option value="fullname">
+                        Full Name
+                    </option>                <option value="furniture">
+                        Furniture
+                    </option>                <option value="href">
+                        Link
+                    </option>                <option value="lat">
+                        Latitude
+                    </option>                <option selected="selected" value="lon">
+                        Longitude
+                    </option>                <option value="name">
+                        Name
+                    </option>                <option value="number">
+                        Number
+                    </option>                <option value="seats">
+                        Seats
+                    </option>                <option value="shortname">
+                        Short Name
+                    </option>                <option value="type">
+                        Type
+                    </option>    </select>
+    </div>
+    <a class="icon icon-minus" href="#"></a>
+</div></div>
+                                <div class="icon-container"><a class="icon icon-plus" href="#"></a></div>
+                            </div>
+                        </form>
+                    

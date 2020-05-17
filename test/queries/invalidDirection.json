@@ -1,0 +1,53 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "minSeats",
+                "countType",
+                "maxLon",
+                "countFurniture",
+                "rooms_seats"
+            ],
+            "ORDER": {
+                "dir": "LEFT",
+                "keys": [
+                    "minSeats",
+                    "countType",
+                    "maxLon",
+                    "countFurniture"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_seats"
+            ],
+            "APPLY": [
+                {
+                    "minSeats": {
+                        "MIN": "rooms_seats"
+                    }
+                },
+                {
+                    "maxLon": {
+                        "MAX": "rooms_lon"
+                    }
+                },
+                {
+                    "countFurniture": {
+                        "COUNT": "rooms_furniture"
+                    }
+                },
+                {
+                    "countType": {
+                        "COUNT": "rooms_type"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

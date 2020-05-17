@@ -1,0 +1,33 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_fail": 65
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_year": 2013
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg",
+                "courses_year",
+                "courses_fail"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {"courses_dept":"biol","courses_avg":71.78,"courses_year":2014,"courses_fail":72},
+        {"courses_dept":"biol","courses_avg":73.7,"courses_year":2015,"courses_fail":95}
+    ]
+}

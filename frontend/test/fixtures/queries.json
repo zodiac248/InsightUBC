@@ -1,0 +1,55 @@
+{
+    "query1":{"WHERE": {"IS": {"courses_dept": "cpsc"} }, "OPTIONS": {"COLUMNS": ["courses_dept", "courses_id"], "ORDER": "courses_id"} },
+    "query2": {
+        "WHERE": {},
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_type",
+                "avgLat",
+                "avgLon"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_type"
+            ],
+            "APPLY": [
+                {
+                    "avgLat": {
+                        "AVG": "rooms_lat"
+                    }
+                },
+                {
+                    "avgLon": {
+                        "AVG": "rooms_lon"
+                    }
+                }
+            ]
+        }
+    }, "query3": {
+    "WHERE": {
+        "NOT": {
+            "OR": [
+                {
+                    "GT": {
+                        "courses_avg": 90
+                    }
+                },
+                {
+                    "LT": {
+                        "courses_avg": 89.9
+                    }
+                }
+            ]
+        }
+    },
+    "OPTIONS": {
+        "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+        ],
+        "ORDER": "courses_avg"
+    }
+}
+}

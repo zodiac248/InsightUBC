@@ -1,0 +1,36 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_audit": 10
+                    }
+                },
+                {
+                    "LT": {
+                        "courses_pass": 10
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_dept":"biol","courses_avg":84.38},
+        {"courses_dept":"biol","courses_avg":84.38},
+        {"courses_dept":"rhsc","courses_avg":84.5},
+        {"courses_dept":"frst","courses_avg":85.56},
+        {"courses_dept":"frst","courses_avg":85.56},
+        {"courses_dept":"rhsc","courses_avg":88},
+        {"courses_dept":"rhsc","courses_avg":88.25}
+    ]
+}

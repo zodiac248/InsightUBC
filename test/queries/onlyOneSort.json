@@ -1,0 +1,31 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_name",
+                "rooms_number",
+                "rooms_type",
+                "rooms_href",
+                "rooms_address"
+            ],
+            "ORDER": "rooms_number"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_name":"HEBB_100","rooms_number":"100","rooms_type":"Tiered Large Group","rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/HEBB-100","rooms_address":"2045 East Mall"},{"rooms_name":"LSC_1001","rooms_number":"1001","rooms_type":"Tiered Large Group","rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/LSC-1001","rooms_address":"2350 Health Sciences Mall"},{"rooms_name":"LSC_1002","rooms_number":"1002","rooms_type":"Tiered Large Group","rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/LSC-1002","rooms_address":"2350 Health Sciences Mall"},{"rooms_name":"OSBO_A","rooms_number":"A","rooms_type":"Open Design General Purpose","rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/OSBO-A","rooms_address":"6108 Thunderbird Boulevard"}]
+}

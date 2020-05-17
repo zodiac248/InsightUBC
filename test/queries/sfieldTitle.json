@@ -1,0 +1,35 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 91
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_title": "com adult educ"
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg",
+                "courses_title"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.29,"courses_title":"com adult educ"},
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.33,"courses_title":"com adult educ"},
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.33,"courses_title":"com adult educ"},
+        {"courses_dept":"adhe","courses_id":"330","courses_avg":91.48,"courses_title":"com adult educ"}
+    ]
+}
